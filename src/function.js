@@ -22,12 +22,12 @@ export function ajouterApprenant ( nomComplet, ville){
     if (nomComplet === i.nomComplet)
         return false ; 
 
-let newStudent = {
+let Student = {
     id : apprenants.length + 1, 
     nomcomplet : nomComplet,
     ville : ville,
     resultats : []
 }
-apprenants.push(newStudent)
+apprenants.push(Student)
         return true 
 }
