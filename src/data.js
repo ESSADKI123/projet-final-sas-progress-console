@@ -72,7 +72,7 @@ export const apprenants = [
   {
     id: 9,
     nomComplet: "moulod",
-    ville: "berkae",
+    ville: "berkane",
     resultats: [
       { jour: 1, exercicesTermines: 10, totalExercices: 20, challengeTermine: true },
       { jour: 2, exercicesTermines: 10, totalExercices: 20, challengeTermine: true },
@@ -80,6 +80,16 @@ export const apprenants = [
       { jour: 4, exercicesTermines: 17, totalExercices: 20, challengeTermine: true },
       { jour: 5, exercicesTermines: 15, totalExercices: 20, challengeTermine: true },
       { jour: 6, exercicesTermines: 14, totalExercices: 20, challengeTermine: true }
+    ]
+  },
+  {
+    id: 10,
+    nomComplet: "abdellah",
+    ville: "berkane",
+    resultats: [
+      { jour: 1, exercicesTermines: 15, totalExercices: 20, challengeTermine: true },
+      { jour: 2, exercicesTermines: 20, totalExercices: 20, challengeTermine: true },
+    
     ]
   }
 ];
