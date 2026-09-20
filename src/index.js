@@ -1,4 +1,4 @@
-import { ajouterApprenant, rechercherApprenant, enregistrerResultat } from './function.js';
+import { ajouterApprenant, rechercherApprenant, enregistrerResultat, calculerProgression3 } from './function.js';
 import promptSync from "prompt-sync";
 const prompt = promptSync();
 
@@ -9,9 +9,6 @@ function afficheMenu() {
   console.log("3. Calculer la progression")
   console.log("4. Enregistrer un résultat")
   console.log("5. Afficher Les Apprenants")
-  console.log("6. Filtrer Les Apprenant Par Niveau")
-  console.log("7. Triée Les Apprenant Par Progression")
-  console.log("8. Triée Les Apprenant Par Alphabetic Ordre")
   console.log("0. Quitter");
   console.log("------------------------------");
 }
