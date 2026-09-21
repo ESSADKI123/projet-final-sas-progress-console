@@ -1,4 +1,4 @@
-import { apprenants } from './data.js';
+import { apprenants } from "./data.js";
 
 export function normaliserNom(nom) {
   return String(nom).trim().toLowerCase();
@@ -12,7 +12,7 @@ export function validerResultat(
 ) {
   if (jour < 1 || jour > 7) {
     console.log("Erreur: Le jour doit être entre 1 et 7.");
-    return false;   
+    return false;
   }
   if (exercicesTermines < 0 || totalExercices < 0) {
     console.log(
@@ -136,50 +136,4 @@ export function afficherApprenants() {
   }
   console.log("====================================");
   return true;
-}
-
-export function filtrerParNiveau(nivo) {
-  let etudiantsfiltres = [];
-
-  for (let item of apprenants) {
-    let score = calculerProgression(item.id);
-    if (score >= nivo) {
-      etudiantsfiltres.push(item);
-    }
-  }
-  return etudiantsfiltres;
-}
-
-export function trierParProgression() {
-  let copie = [...apprenants];
-  for (let i = 0; i < copie.length; i++) {
-    for (let j = i + 1; j < copie.length; j++) {
-      let scoreA = calculerProgression(copie[i].id);
-      let scoreB = calculerProgression(copie[j].id);
-
-      if (scoreA < scoreB) {
-        let temp = copie[i];
-        copie[i] = copie[j];
-        copie[j] = temp;
-      }
-    }
-  }
-  return copie;
-}
-
-export function trierParOrdreAlphabetique() {
-  let copie = [...apprenants];
-  for (let i = 0; i < copie.length; i++) {
-    for (let j = i + 1; j < copie.length; j++) {
-      let nomA = copie[i].nomComplet.toLowerCase();
-      let nomB = copie[j].nomComplet.toLowerCase();
-
-      if (nomA > nomB) {
-        let temp = copie[i];
-        copie[i] = copie[j];
-        copie[j] = temp;
-      }
-    }
-  }
-  return copie;
 }

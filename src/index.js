@@ -1,24 +1,25 @@
-import { ajouterApprenant, rechercherApprenant, enregistrerResultat, calculerProgression3 } from './function.js';
 import promptSync from "prompt-sync";
-const prompt = promptSync();
+import {
+  ajouterApprenant,
+  rechercherApprenant,
+  calculerProgression,
+  enregistrerResultat,
+  afficherApprenants,
+} from "./function.js";
 
-function afficheMenu() {
-  console.log("\n*** GESTION DES APPRENANTS ***");
-  console.log("1. Ajouter un apprenant");
-   console.log("2. Rechercher un apprenant")
-  console.log("3. Calculer la progression")
-  console.log("4. Enregistrer un résultat")
-  console.log("5. Afficher Les Apprenants")
-  console.log("0. Quitter");
-  console.log("------------------------------");
-}
+const prompt = promptSync();
 let applicationActive = true;
 
 while (applicationActive) {
-  afficheMenu();
-
-
-  let choix = prompt("Veuillez choisir une option (0-8) : ");
+  console.log("\n=== GESTION DES APPRENANTS ===");
+  console.log("1. Ajouter un apprenant");
+  console.log("2. Rechercher un apprenant");
+  console.log("3. Calculer la progression");
+  console.log("4. Enregistrer un résultat");
+  console.log("5. Afficher Les Apprenants");
+  console.log("0. Quitter");
+  console.log("==============================");
+  let choix = prompt("Veuillez choisir une option (0-6) : ");
 
   switch (choix) {
     case "1":
@@ -77,6 +78,7 @@ while (applicationActive) {
       break;
     case "5":
       console.log("\n--- Afficher Les Apprenants ---");
+      afficherApprenants()
 
       break;
     case "6":
@@ -117,4 +119,4 @@ while (applicationActive) {
     default:
       console.log("Erreur : Option invalide.");
   }
-}
+ }
