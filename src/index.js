@@ -81,19 +81,6 @@ while (applicationActive) {
       afficherApprenants()
 
       break;
-    case "6":
-      console.log("\n--- Filtrer Les Etudiants ---");
-      let nivoo = Number(prompt("Saisi Le Niveau Minimal: "));
-      let resultatsFiltrer = filtrerParNiveau(nivoo);
-
-      for (let item of resultatsFiltrer) {
-        let score = calculerProgression(item.id);
-        console.log(
-          `ID: ${item.id} | Nom: ${item.nomComplet} | Progression: ${score}%`,
-        );
-      }
-
-      break;
     case "0":
       console.log("Fermeture de l'application. Au revoir !");
       applicationActive = false;
