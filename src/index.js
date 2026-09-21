@@ -19,7 +19,7 @@ while (applicationActive) {
   console.log("5. Afficher Les Apprenants");
   console.log("0. Quitter");
   console.log("==============================");
-  let choix = prompt("Veuillez choisir une option (0-6) : ");
+  let choix = prompt("Veuillez choisir une option (0-5) : ");
 
   switch (choix) {
     case "1":
